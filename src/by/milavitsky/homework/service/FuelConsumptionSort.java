@@ -4,9 +4,9 @@ import by.milavitsky.homework.entity.AbstractPlane;
 
 import java.util.Comparator;
 
-public class FuelConsumption implements Comparator<AbstractPlane> {
+public class FuelConsumptionSort implements Comparator<AbstractPlane> {
     @Override
     public int compare(AbstractPlane o1, AbstractPlane o2) {
-        return 0;
+        return o1.getFuelСonsumption() - o2.getFuelСonsumption();
     }
 }

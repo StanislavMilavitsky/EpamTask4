@@ -1,10 +1,13 @@
 package by.milavitsky.homework.service;
 
+import by.milavitsky.homework.entity.AbstractPlane;
+
 import java.util.Comparator;
 
-public class EnginePowerSort implements Comparator<Integer> {
+ class EnginePowerSort implements Comparator<AbstractPlane> {
+
     @Override
-    public int compare(Integer o1, Integer o2) {
-        return 0;
+    public int compare(AbstractPlane o1, AbstractPlane o2) {
+        return o1.getEnginePower() - o2.getEnginePower();
     }
 }

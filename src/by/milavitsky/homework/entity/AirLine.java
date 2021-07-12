@@ -3,6 +3,8 @@ package by.milavitsky.homework.entity;
 import by.milavitsky.homework.exception.IncorrectIdException;
 import by.milavitsky.homework.exception.IncorrectValueException;
 
+import static by.milavitsky.homework.validation.Validator.*;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,12 +35,34 @@ public class AirLine implements Serializable {
         return listPlane;
     }
 
+    public AbstractPlane getPlane(int index) {
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index);
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return null;
+    }
+
     public int getSize() {
         return listPlane.size();
     }
 
     public UUID getId(int index) {
-        return listPlane.get(index).getId();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getId();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return null;
     }
 
     public UUID getId(AbstractPlane plane) {
@@ -51,7 +75,16 @@ public class AirLine implements Serializable {
     }
 
     public int getEnginePower(int index) {
-        return listPlane.get(index).getEnginePower();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getEnginePower();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
     public int getEnginePower(AbstractPlane plane) {
@@ -64,7 +97,16 @@ public class AirLine implements Serializable {
     }
 
     public int getLiftingCapacity(int index) {
-        return listPlane.get(index).getLiftingCapacity();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getLiftingCapacity();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
     public int getLiftingCapacity(AbstractPlane plane) {
@@ -77,20 +119,38 @@ public class AirLine implements Serializable {
     }
 
     public int getCapacityOfpassengers(int index) {
-        return listPlane.get(index).getCapacityOfpassengers();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getCapacityOfPassengers();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
     public int getCapacityOfpassengers(AbstractPlane plane) {
         for (int i = 0; i < listPlane.size(); i++) {
             if (plane.equals(listPlane.get(i))) {
-                return listPlane.get(i).getCapacityOfpassengers();
+                return listPlane.get(i).getCapacityOfPassengers();
             }
         }
         return 0;
     }
 
     public int getTankCapacity(int index) {
-        return listPlane.get(index).getTankCapacity();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getTankCapacity();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
     public int getTankCapacity(AbstractPlane plane) {
@@ -103,7 +163,16 @@ public class AirLine implements Serializable {
     }
 
     public int getmaxSpeed(int index) {
-        return listPlane.get(index).getMaxSpeed();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getMaxSpeed();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
     public int getmaxSpeed(AbstractPlane plane) {
@@ -116,7 +185,16 @@ public class AirLine implements Serializable {
     }
 
     public int getWeight(int index) {
-        return listPlane.get(index).getWeight();
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getWeight();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
     public int getWeight(AbstractPlane plane) {
@@ -128,33 +206,37 @@ public class AirLine implements Serializable {
         return 0;
     }
 
-    public UUID getfuelСonsumption(int index) {
-        return listPlane.get(index).getId();
+    public int getFuelСonsumption(int index) {
+        try {
+            if (isIndexTrue(index)) {
+                return listPlane.get(index).getFuelСonsumption();
+            } else {
+                throw new IndexOutOfBoundsException("Index out of the bound");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage() + " " + Arrays.toString(ex.getStackTrace()));
+        }
+        return 0;
     }
 
-    public UUID getfuelСonsumption(AbstractPlane plane) {
+    public int getFuelСonsumption(AbstractPlane plane) {
         for (int i = 0; i < listPlane.size(); i++) {
             if (plane.equals(listPlane.get(i))) {
-                return listPlane.get(i).getId();
+                return listPlane.get(i).getFuelСonsumption();
             }
         }
-        return null;
-    }
-
-
-    public AbstractPlane recieveByIndex(int index) {
-        return listPlane.get(index);
+        return 0;
     }
 
 
     public void remove(int index) {
         try {
-            if (index <= (listPlane.size() - 1) & index >= 0) {
+            if (isIndexTrue(index)) {
                 listPlane.remove(index);
             } else {
-                throw new IncorrectValueException("Index out of the bound");
+                throw new IndexOutOfBoundsException("Index out of the bound");
             }
-        } catch (IncorrectValueException ex) {
+        } catch (IndexOutOfBoundsException ex) {
             System.out.println(ex.getMessage() + ", " + Arrays.toString(ex.getStackTrace()));
         }
     }
@@ -179,12 +261,12 @@ public class AirLine implements Serializable {
 
     public void setPlaneByIndex(int index, AbstractPlane plane) {
         try {
-            if (index <= (listPlane.size() - 1) & index >= 0) {
+            if (isIndexTrue(index)) {
                 listPlane.set(index, plane);
             } else {
-                throw new IncorrectValueException("Index out of the bound");
+                throw new IndexOutOfBoundsException("Index out of the bound");
             }
-        } catch (IncorrectValueException ex) {
+        } catch (IndexOutOfBoundsException ex) {
             System.out.println(ex.getMessage() + ", " + Arrays.toString(ex.getStackTrace()));
         }
     }

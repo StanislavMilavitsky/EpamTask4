@@ -7,7 +7,7 @@ public abstract class AbstractPlane implements Serializable, Cloneable {
 
     private int enginePower;
     private int liftingCapacity;
-    private int capacityOfpassengers;
+    private int capacityOfPassengers;
     private int fuelСonsumption;
     private int tankCapacity;
     private int maxSpeed;
@@ -30,12 +30,12 @@ public abstract class AbstractPlane implements Serializable, Cloneable {
         this.liftingCapacity = liftingCapacity;
     }
 
-    public int getCapacityOfpassengers() {
-        return capacityOfpassengers;
+    public int getCapacityOfPassengers() {
+        return capacityOfPassengers;
     }
 
-    public void setCapacityOfpassengers(int capacityOfpassengers) {
-        this.capacityOfpassengers = capacityOfpassengers;
+    public void setCapacityOfPassengers(int capacityOfPassengers) {
+        this.capacityOfPassengers = capacityOfPassengers;
     }
 
     public int getFuelСonsumption() {

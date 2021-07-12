@@ -20,7 +20,7 @@ public class PlaneCapacityService {
     public static int capacityOfpassengers(){
         int capacityPassengers = 0;
         for (int i = 0; i < listPlane.size(); i++){
-            capacityPassengers = capacityPassengers + listPlane.get(i).getCapacityOfpassengers();
+            capacityPassengers = capacityPassengers + listPlane.get(i).getCapacityOfPassengers();
         }
         return capacityPassengers;
     }

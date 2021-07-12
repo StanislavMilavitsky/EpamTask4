@@ -4,7 +4,7 @@ import by.milavitsky.homework.entity.AbstractPlane;
 
 import java.util.Comparator;
 
-public class PlaneTypSort implements Comparator<AbstractPlane> {
+public class PlaneTypWarSort implements Comparator<AbstractPlane> {
     @Override
     public int compare(AbstractPlane o1, AbstractPlane o2) {
         if (o1.getClass() == o2.getClass()){

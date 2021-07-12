@@ -1,6 +1,7 @@
 package by.milavitsky.homework.exception;
 
-public class IndexOutOfTheBound extends Exception {
+public class IndexOutOfTheBound extends Exception {// Делать ли свой эксепшн
+
     public IndexOutOfTheBound() {
     }
 

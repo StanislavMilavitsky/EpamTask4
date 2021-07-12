@@ -4,9 +4,9 @@ import by.milavitsky.homework.entity.AbstractPlane;
 
 import java.util.Comparator;
 
-public class FuelConsumptionReverse implements Comparator<AbstractPlane> {
+ class FuelConsumptionSortReverse implements Comparator<AbstractPlane> {
     @Override
     public int compare(AbstractPlane o1, AbstractPlane o2) {
-        return 0;
+        return new FuelConsumptionSort().reversed().compare(o1, o2);
     }
 }
