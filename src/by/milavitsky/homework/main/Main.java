@@ -3,12 +3,10 @@ package by.milavitsky.homework.main;
 import static by.milavitsky.homework.entity.AirLine.*;
 
 import by.milavitsky.homework.entity.CivilianPlane;
-import by.milavitsky.homework.entity.CivilianPlaneType;
+import by.milavitsky.homework.enums.CivilianPlaneType;
 import by.milavitsky.homework.entity.WarPlane;
-import by.milavitsky.homework.entity.WarPlaneType;
-import by.milavitsky.homework.enums.EnumSort;
-import by.milavitsky.homework.service.PlaneSortService;
-import by.milavitsky.homework.service.SearchService;
+import by.milavitsky.homework.enums.WarPlaneType;
+import by.milavitsky.homework.service.AirLineService;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,6 +20,7 @@ public class Main {
         airLine.add(plane2);
         airLine.add(plane3);
         airLine.add(plane4);
+        airLine.getPlane(3).getFuelСonsumption();
         plane1.setMaxSpeed(40);
         plane2.setMaxSpeed(20);
         plane3.setMaxSpeed(50);
@@ -41,7 +40,7 @@ public class Main {
        /* System.out.println(airLine.getListPlane());
         PlaneSortService.sortAirLine(EnumSort.MAX_SPEED__WEIGHT__LIFTING_CAPACITY);
         System.out.println(airLine.getListPlane());*/
-        System.out.println(SearchService.searchRangeFuelСonsumption(149, 200));
+        System.out.println(AirLineService.searchRangeFuelСonsumption(149, 200));
 
 
     }

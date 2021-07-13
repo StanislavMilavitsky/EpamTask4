@@ -1,10 +1,10 @@
-package by.milavitsky.homework.service;
+package by.milavitsky.homework.service.comporator;
 
 import by.milavitsky.homework.entity.AbstractPlane;
 
 import java.util.Comparator;
 
-public class MaxSpeedWeightLiftingCapacitySort implements Comparator<AbstractPlane> {
+public class MaxSpeedWeightLiftingCapacitySortComporator implements Comparator<AbstractPlane> {
     @Override
     public int compare(AbstractPlane o1, AbstractPlane o2) {
         int value1 = o1.getMaxSpeed() - (o2.getMaxSpeed());

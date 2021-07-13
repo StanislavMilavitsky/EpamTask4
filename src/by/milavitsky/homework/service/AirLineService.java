@@ -6,7 +6,7 @@ import by.milavitsky.homework.entity.AbstractPlane;
 
 import java.util.ArrayList;
 
-public class SearchService {
+public class AirLineService {
 
     public static ArrayList<AbstractPlane> searchRangeFuelСonsumption(int value1, int value2) {
         ArrayList<AbstractPlane> list = new ArrayList<AbstractPlane>();

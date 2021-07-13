@@ -12,7 +12,7 @@ public abstract class AbstractPlane implements Serializable, Cloneable {
     private int tankCapacity;
     private int maxSpeed;
     private int weight;
-    private UUID id;
+    private UUID id = UUID.randomUUID();
 
     public int getEnginePower() {
         return enginePower;
@@ -78,5 +78,4 @@ public abstract class AbstractPlane implements Serializable, Cloneable {
         this.id = id;
     }
 
-    protected abstract void generationId();
 }

@@ -1,29 +1,19 @@
 package by.milavitsky.homework.entity;
 
+import by.milavitsky.homework.enums.CivilianPlaneType;
+
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
 public class CivilianPlane extends AbstractPlane implements Serializable {
     private final CivilianPlaneType civilianPlaneType;
-    private final CivilianPlaneModel civilianPlaneModel = new CivilianPlaneModel();
+    private final String civilianPlaneModel;
 
     public CivilianPlane(CivilianPlaneType civilianPlaneType, String model) {
-        civilianPlaneModel.setModel(model);
+        civilianPlaneModel = model;
         this.civilianPlaneType = civilianPlaneType;
-        generationId();
     }
-
-
-    /**
-     * Generate random id for plane with UUID class
-     */
-    @Override
-    protected void generationId() {
-        UUID uuid = UUID.randomUUID();
-        this.setId(uuid);
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -41,13 +31,13 @@ public class CivilianPlane extends AbstractPlane implements Serializable {
 
     @Override
     public int hashCode() {
-        return 21 * this.getLiftingCapacity() + 21 * this.getMaxSpeed() + 21 * this.getWeight() + this.getId().hashCode();
+        return 21 * this.getLiftingCapacity() + 19 * this.getMaxSpeed() + 12 * this.getWeight() + this.getId().hashCode();
     }
 
     @Override
     public String toString() {
         return this.getClass().getName() + " Plane" +
                 " type = " + civilianPlaneType +
-                ", model = " + civilianPlaneModel.getModel();
+                ", model = " + civilianPlaneModel;
     }
 }

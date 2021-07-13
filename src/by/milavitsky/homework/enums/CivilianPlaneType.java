@@ -1,4 +1,4 @@
-package by.milavitsky.homework.entity;
+package by.milavitsky.homework.enums;
 
 public enum CivilianPlaneType {
     AIRBUS, BOEING, ATR, EMBRAER;
