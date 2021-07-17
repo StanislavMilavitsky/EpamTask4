@@ -1,7 +1,6 @@
 package by.milavitsky.homework.entity;
 
-import by.milavitsky.homework.exception.IncorrectIdException;
-import by.milavitsky.homework.exception.IncorrectValueException;
+import by.milavitsky.homework.exception.*;
 
 import static by.milavitsky.homework.validation.Validator.*;
 
@@ -21,8 +20,12 @@ public class AirLine implements Serializable {
             if (listPlane.size() < MAXSIZE) {
                 listPlane.add(plane);
             } else {
-                throw new IncorrectValueException("Airline size peaks");
+                throw new MaxSizeReachedException();
             }
+    }
+
+    public void add(ArrayList listPlanes){
+        listPlane.addAll(listPlanes);
     }
 
     public ArrayList<AbstractPlane> getListPlane() {
@@ -62,7 +65,7 @@ public class AirLine implements Serializable {
         listPlane.remove(plane);
     }
 
-    public void remove(UUID id) {
+    public void remove(UUID id) throws IncorrectIdException {
             for (int i = 0; i < listPlane.size(); i++) {
                 if (listPlane.get(i).getId() == id) {
                     listPlane.remove(i);

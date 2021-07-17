@@ -1,6 +1,7 @@
 package by.milavitsky.homework.exception;
 
-public class IncorrectIdException extends Exception {
+public class IncorrectIdException extends RuntimeException {//todo
+
     public IncorrectIdException() {
     }
 

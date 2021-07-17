@@ -36,8 +36,16 @@ public class CivilianPlane extends AbstractPlane implements Serializable {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + " Plane" +
+        return this.getClass().getSimpleName() +
                 " type = " + civilianPlaneType +
-                ", model = " + civilianPlaneModel;
+                ", model = " + civilianPlaneModel +
+                ", engine power= " + getEnginePower() +
+                ", lifting capacity= " + getLiftingCapacity() +
+                ", capacity of passengers= " + getCapacityOfPassengers() +
+                ", fuel consumption= " + getFuelСonsumption() +
+                ", tank capacity= " + getTankCapacity() +
+                ", max speed= " + getMaxSpeed() +
+                ", weight= " + getWeight() +
+                ", id= " + getId() + "." + "\n";
     }
 }

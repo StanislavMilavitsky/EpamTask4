@@ -1,0 +1,7 @@
+Сlassification, type, model, engine power, lifting capacity, capacity of passengers, fuel consumption, tank capacity, max speed, weight - "Header"
+Civilian,AIRBUS,S540,500,30,150,70,2000,900,30
+Civilian,BOEING,707,600,40,140,80,2100,1000,35
+Plane,ATR, 707,600,40,140,80,2100,1000,35
+War,LITE,606,600,40,140,80,2100,1000,35
+War,MIG,24,400,10,2,60,300,1300,12
+Civilian,ATR,K21,700,60,20,100,2500,800,55
