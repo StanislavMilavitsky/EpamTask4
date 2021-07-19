@@ -16,7 +16,6 @@ public class FilePlaneReader {
         StringBuilder builder = new StringBuilder();
         ArrayList<AbstractPlane> list = new ArrayList<AbstractPlane>();
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
-        //*
         // Skip header, 1 line
         if (bufferedReader.ready()) {
             bufferedReader.readLine();

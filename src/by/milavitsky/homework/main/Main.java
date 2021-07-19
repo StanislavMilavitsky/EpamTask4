@@ -2,14 +2,7 @@ package by.milavitsky.homework.main;
 
 import static by.milavitsky.homework.entity.AirLine.*;
 
-import by.milavitsky.homework.entity.CivilianPlane;
-import by.milavitsky.homework.enums.CivilianPlaneType;
-import by.milavitsky.homework.entity.WarPlane;
-import by.milavitsky.homework.enums.WarPlaneType;
-import by.milavitsky.homework.parser.FilePlaneParser;
 import by.milavitsky.homework.reader.FilePlaneReader;
-import by.milavitsky.homework.service.AirLineService;
-
 import java.io.IOException;
 
 

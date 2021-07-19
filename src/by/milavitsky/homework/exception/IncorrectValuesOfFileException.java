@@ -1,6 +1,7 @@
 package by.milavitsky.homework.exception;
 
 public class IncorrectValuesOfFileException extends Exception {
+
     public IncorrectValuesOfFileException() {
     }
 

@@ -4,7 +4,6 @@ import by.milavitsky.homework.enums.CivilianPlaneType;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.UUID;
 
 public class CivilianPlane extends AbstractPlane implements Serializable {
     private final CivilianPlaneType civilianPlaneType;

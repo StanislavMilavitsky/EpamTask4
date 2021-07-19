@@ -44,7 +44,6 @@ public class AirLine implements Serializable {
         return listPlane.size();
     }
 
-
     /*public UUID getId(AbstractPlane plane) {
         for (int i = 0; i < listPlane.size(); i++) {
             if (plane.equals(listPlane.get(i))) {
